@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input id="msg" type="text">
+    <button onclick="play()">Play</button>
+    <script>
+        const speech = new SpeechSynthesisUtterance()
+        function play() {
+            const msg = document.getElementById('msg').value;
+            speech.lang = "en";
+            speech.text = msg;
+            window.speechSynthesis.speak(speech);
+        }
+    </script>
+</body>
+
+</html>
